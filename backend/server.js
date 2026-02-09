@@ -22,5 +22,5 @@ app.post("/api/login", (req, res) => {
   res.status(401).json({ success: false, message: "Invalid credentials" });
 });
 
-const PORT = 8000;
+const PORT = 8002;
 app.listen(PORT, () => console.log(`Backend running on ${PORT}`));
