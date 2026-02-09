@@ -1,19 +1,26 @@
 const express = require("express");
-const path = require("path");
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
+app.use(express.json());
+
+// Dummy user
+const user = {
+  email: "admin@netflix.com",
+  password: "1234"
+};
+
+// Login API
+app.post("/api/login", (req, res) => {
+  const { email, password } = req.body;
+
+  if (email === user.email && password === user.password) {
+    return res.json({ success: true, message: "Login successful" });
+  }
+
+  res.status(401).json({ success: false, message: "Invalid credentials" });
+});
+
 const PORT = 8000;
-
-// Serve frontend
-app.use(express.static(path.join(__dirname, "../frontend")));
-
-app.get("/api/health", (req, res) => {
-  res.json({
-    status: "UP",
-    message: "Backend is running successfully"
-  });
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Backend running on ${PORT}`));

@@ -1,7 +1,43 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: #e5e7eb;
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+}
+
+.login-container {
+  width: 300px;
+  margin: 100px auto;
+  background: rgba(0,0,0,0.8);
+  padding: 20px;
   text-align: center;
-  margin-top: 100px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  width: 95%;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+}
+
+.movies {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  background: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
