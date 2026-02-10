@@ -1,9 +1,10 @@
 {
-  "name": "netflix-backend",
+  "name": "cloud-monitor-backend",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "app.js",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "prom-client": "^14.1.1",
+    "cors": "^2.8.5"
   }
 }
