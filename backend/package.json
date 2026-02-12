@@ -1,10 +1,7 @@
 {
-  "name": "cloud-monitor-backend",
+  "name": "backend",
   "version": "1.0.0",
-  "main": "app.js",
   "dependencies": {
-    "express": "^4.18.2",
-    "prom-client": "^14.1.1",
-    "cors": "^2.8.5"
+    "express": "^4.18.2"
   }
 }
