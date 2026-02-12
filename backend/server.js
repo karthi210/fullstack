@@ -1,4 +1,4 @@
-iconst express = require('express');
+const express = require('express');
 const responseTime = require('response-time');
 const client = require('prom-client');
 
@@ -13,9 +13,6 @@ const httpRequestCounter = new client.Counter({
     help: 'Total number of HTTP requests',
     labelNames: ['method', 'route', 'status']
 });
-
-const PORT = 8002;
-app.listen(PORT, () => console.log(`Backend running on ${PORT}`));
 
 // Custom Histogram for response time
 const httpResponseTime = new client.Histogram({
