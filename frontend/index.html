@@ -10,7 +10,7 @@
 
   <script>
     async function fetchData() {
-      const res = await fetch("http://localhost:5000/api");
+      const res = await fetch("http://13.232.12.92:5000/api");
       const data = await res.json();
       document.getElementById("result").innerText = data.message;
     }
